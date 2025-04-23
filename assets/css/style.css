@@ -155,8 +155,17 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
-
+body { background: var(--smoky-black);}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* Ensure it stays behind other content */
+}
 
 
 
@@ -732,7 +741,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 15px;
+  gap: 35px;
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
@@ -752,6 +761,8 @@ main {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
+  height: 15vh;
+  width: auto;
 }
 
 .clients-item img:hover { filter: grayscale(0); }
@@ -764,7 +775,7 @@ main {
   #RESUME
 \*-----------------------------------*/
 
-.article-title { margin-bottom: 30px; }
+.article-title { margin-bottom: 30px; display: flex; align-items: center; gap: 10px;}
 
 
 /**
@@ -930,7 +941,7 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { background: hsl(240, 2%, 20%); }
 
 .project-list {
   display: grid;
